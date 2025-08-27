@@ -1,0 +1,131 @@
+.productsCardList{
+    padding: 20px 130px;
+
+    @media (max-width: 1200px) {
+        padding: 20px 80px;
+    }
+
+    @media (max-width: 900px) {
+        padding: 20px 40px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 20px 20px;
+    }
+
+    .header{
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 22px;
+        line-height: 28px;
+        margin: 20px 0 12px;
+    }
+
+    .featuredProductsList{
+        margin-bottom: 30px;
+    }
+
+    .featuredProductsList, .newProductsList, .searchedProductsList{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 176px); 
+        justify-content: start;
+        gap: 12px;
+
+        @media (max-width: 768px) {
+            justify-content: center; 
+        }
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    color: #1C0D0F;
+    justify-content: center;
+    z-index: 999;
+
+    .closeButton{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    .price{
+        margin-top: 12px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+  
+.modalContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+
+    @media (max-width: 600px) {
+        width: 95%;
+        padding: 15px;
+    }
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.productWrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+
+.productReviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    .review{
+        width: 33%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+
+        .reviewText{
+            font-weight: bold;
+        }
+
+        .reviewRating{
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .reviewerName{
+            font-style: italic;
+        }
+    }
+}

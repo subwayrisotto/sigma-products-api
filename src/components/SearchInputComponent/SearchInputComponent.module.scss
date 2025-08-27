@@ -1,0 +1,38 @@
+.searchInputWrapper {
+    position: relative;
+    max-width: 248px; 
+    width: 100%;
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        left: 18px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .searchInput {
+        width: 100%;
+        padding: 12px 12px 12px 48px;
+        outline: none;
+        border: 1px solid #F2E8E8;
+        background: #F2E8E8;
+        border-radius: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #964F52;
+        transition: all 0.25s ease;
+
+        &:focus {
+            border-color: #964F52;
+            max-width: 100%; 
+        }
+
+        &::placeholder {
+            color: #964F52;
+        }
+    }
+}
