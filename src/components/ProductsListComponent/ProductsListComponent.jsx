@@ -29,7 +29,7 @@ function ProductsListComponent({products, search}) {
     }, [products])
 
     useEffect(() => {
-        if(search != ''){
+        if(search !== ''){
             const searched = products.filter(product => {
                return product.title.toLowerCase().includes(search.toLowerCase())
             })
